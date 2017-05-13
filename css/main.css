@@ -2563,6 +2563,44 @@ select[multiple].input-lg {
 .lead-h {
   margin-bottom: 0.6em;
 }
+@keyframes fadeInUpSm {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInUpLg {
+  0% {
+    opacity: 0;
+    transform: translateY(1.8rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fade-up-one {
+  animation: fadeInUpLg 0.5s ease-in-out backwards;
+  animation-delay: 0.4s;
+}
+.fade-up-two {
+  animation: fadeInUpLg 0.5s ease-in-out backwards;
+  animation-delay: 0.6s;
+}
 .header {
   font-family: "Fira Sans", sans-serif;
   font-weight: 500;
@@ -2822,7 +2860,7 @@ nav {
   z-index: 30;
 }
 .menu-button:hover span {
-  background-color: #FF6B00;
+  background-color: #666666;
 }
 .menu-button.active .top {
   transform: translateY(10px) translateX(0) rotate(45deg);
@@ -2858,7 +2896,6 @@ nav {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.95);
   height: 0px;
-  opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
 }
@@ -2872,10 +2909,12 @@ nav {
   padding-top: 100px;
 }
 .menu-items li {
+  opacity: 0;
   margin: 0.5em 0;
 }
 .menu-items a {
   color: #000;
+  transition: all 0.3s ease;
 }
 .menu-items a:hover {
   text-decoration: none;
@@ -2887,9 +2926,18 @@ nav {
 }
 .menu-items.active {
   visibility: visible;
-  opacity: 1;
   height: 100vh;
   min-height: 320px;
+}
+.menu-items.active li {
+  animation: fadeInDown 1s ease forwards;
+  animation-delay: 0.2s;
+}
+.menu-items.active li:nth-of-type(2) {
+  animation-delay: 0.28s;
+}
+.menu-items.active li:nth-of-type(3) {
+  animation-delay: 0.36s;
 }
 @media (min-width: 768px) {
   .menu-items {
@@ -2908,6 +2956,7 @@ nav {
     padding: 0;
   }
   .menu-items li {
+    opacity: 1;
     display: inline-block;
     margin: 0 1em;
     line-height: 70px;
@@ -2919,11 +2968,12 @@ nav {
 body.menu-open {
   overflow: hidden;
 }
-section {
-  margin-bottom: 10px;
+.container.intro,
+#work .container,
+#play .container {
+  border-bottom: #FAFAFA 1px solid;
 }
 .intro {
-  margin-top: 50px;
   text-align: center;
 }
 .intro p {
@@ -2937,20 +2987,10 @@ section {
   margin-top: 2em;
   margin-bottom: 1.5em;
 }
-.intro a {
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.04em;
-  font-size: 1.2rem;
-  color: #000;
-}
-.intro a:hover {
-  color: #000;
-  background-color: transparent;
-}
 @media (min-width: 768px) {
-  .intro {
-    margin-top: 70px;
+  .intro p {
+    font-size: 3rem;
+    line-height: 1.4;
   }
 }
 #work {
@@ -2962,23 +3002,8 @@ section {
 #work p {
   margin-bottom: 2em;
 }
-#work .container-fluid {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  border: #fafafa 1px solid;
-}
-#work .container-fluid.prj-baby {
-  background-color: white;
-}
-#work .container-fluid.prj-glow {
-  background-color: white;
-}
 @media (min-width: 768px) {
-  #work .container-fluid {
-    padding-top: 30px;
-  }
-  #work .container-fluid .col-pull {
+  #work .col-pull {
     float: right !important;
   }
 }
@@ -3008,6 +3033,7 @@ section {
     padding: 0.8em 2.6em 3.3em 2.6em;
   }
   #work .container {
+    padding-top: 30px;
     max-height: 460px;
   }
 }
@@ -3023,8 +3049,12 @@ section {
     max-height: 480px;
   }
 }
-#play h1 {
-  font-size: 3rem;
+#play h1,
+#about h1 {
+  font-size: 2.3rem;
+  text-align: center;
+  letter-spacing: 0.1em;
+  margin-top: 1em;
 }
 .playcircle {
   width: 250px;
@@ -3077,9 +3107,6 @@ section {
   .playcircle:hover {
     background-size: 322px;
   }
-}
-#about h1 {
-  font-size: 3rem;
 }
 .carousel {
   height: 450px;
@@ -3279,14 +3306,29 @@ footer p {
 }
 footer ul {
   list-style: none;
-  margin-top: 0.2em;
+  margin-top: 0.4em;
+  padding-left: 0;
 }
 footer li {
   display: inline-block;
-  font-family: "Fira Sans", sans-serif;
-  font-weight: 300;
-  font-size: 1.2rem;
 }
-footer li.second {
-  margin: 0 1em;
+footer .second {
+  margin: 0 1.4em;
+}
+footer svg {
+  width: 24px;
+  height: 24px;
+}
+footer svg:hover path {
+  fill: #FF6B00;
+  transition: all 0.3s ease;
+}
+@media (min-width: 768px) {
+  footer .second {
+    margin: 0 1.2em;
+  }
+  footer svg {
+    width: 30px;
+    height: 30px;
+  }
 }
