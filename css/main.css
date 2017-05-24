@@ -3015,10 +3015,29 @@ body.menu-open {
   text-align: center;
 }
 #work h2 {
-  margin-bottom: 1.2em;
+  margin-bottom: 0em;
 }
 #work p {
-  margin-bottom: 2em;
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-top: 0.4em;
+  margin-bottom: 1.6em;
+}
+#work .container-fluid {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+}
+@media (min-width: 768px) {
+  #work .container-fluid.prj-baby {
+    background-position: bottom center;
+    background-image: url("../img/baby-bg.jpg");
+  }
+  #work .container-fluid.prj-glow {
+    background-position: center center;
+    background-image: url("../img/glow-bg.jpg");
+  }
 }
 @media (min-width: 768px) {
   #work .col-pull {
@@ -3037,6 +3056,8 @@ body.menu-open {
 #work .intro-block {
   background-color: white;
   padding: 0.6em 2em 2em 2em;
+  max-width: 400px;
+  margin: auto;
 }
 @media (min-width: 768px) {
   #work h2 {
@@ -3045,14 +3066,16 @@ body.menu-open {
   #work p {
     font-size: 1.6rem;
     line-height: 1.7;
+    margin-bottom: 2em;
   }
   #work .intro-block {
     text-align: left;
+    max-width: none;
     padding: 0.8em 2.6em 3.3em 2.6em;
   }
   #work .container {
     padding-top: 30px;
-    max-height: 460px;
+    max-height: 480px;
   }
 }
 @media (min-width: 992px) {
@@ -3064,7 +3087,7 @@ body.menu-open {
     padding: 1em 2.8em 3.5em 2.8em;
   }
   #work .container {
-    max-height: 480px;
+    max-height: 550px;
   }
 }
 #play h1,
@@ -3379,7 +3402,7 @@ footer .social-media a {
   box-shadow: none;
 }
 footer .second {
-  margin: 0 1.4em;
+  margin: 0 1.5em 0 1.4em;
 }
 footer svg {
   width: 24px;
