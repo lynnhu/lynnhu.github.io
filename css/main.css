@@ -3213,14 +3213,20 @@ body.menu-open {
     top: 390px;
   }
 }
+a.left {
+  transition: all 0.3s ease;
+}
 a.left.carousel-control {
   color: #000;
   text-shadow: none;
   opacity: 1;
   background-image: none;
 }
-a.left.carousel-control:hover {
-  color: #000;
+a.left:hover {
+  opacity: 0.6;
+}
+a.right {
+  transition: all 0.3s ease;
 }
 a.right.carousel-control {
   color: #000;
@@ -3228,19 +3234,14 @@ a.right.carousel-control {
   opacity: 1;
   background-image: none;
 }
-a.right.carousel-control:hover {
-  color: #000;
+a.right:hover {
+  opacity: 0.6;
 }
 .carousel-control .icon-prev,
 .carousel-control .icon-next {
   background-size: 20px 20px;
   background-repeat: no-repeat;
   background-position: center;
-  transition: all 0.3s ease;
-}
-.carousel-control .icon-prev:hover,
-.carousel-control .icon-next:hover {
-  opacity: 0.6;
 }
 @media (min-width: 768px) {
   .carousel-control .icon-prev,
