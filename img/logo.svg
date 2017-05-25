@@ -1,12 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
-    <title>logo</title>
-    <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="logo" fill-rule="nonzero" fill="#000000">
-            <path d="M4.16666667,45.8333333 L45.8333333,45.8333333 L45.8333333,4.16666667 L4.16666667,4.16666667 L4.16666667,45.8333333 Z M0,0 L50,0 L50,50 L0,50 L0,0 Z M25,40 C33.2842712,40 40,33.2842712 40,25 C40,16.7157288 33.2842712,10 25,10 C16.7157288,10 10,16.7157288 10,25 C10,33.2842712 16.7157288,40 25,40 Z" id="Combined-Shape"></path>
-        </g>
-    </g>
-</svg>
+<svg width="120" height="120" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg"><title>logo</title><g fill="none" fill-rule="evenodd"><path d="M119.293 80.707l1.414-1.414-80-80L39.293.707 78.586 40 39.293 79.293a1 1 0 0 0 1.414 1.414L80 41.414l39.293 39.293z" fill="#878787" fill-rule="nonzero"/><path fill="#000" d="M0 40L40 0v80L0 120z"/><path fill="#878787" d="M40 80L0 120h80l40-40z"/><path d="M-1.698 41.716l81 79a1 1 0 0 0 1.396-1.432l-81-79a1 1 0 1 0-1.396 1.432z" fill="#FFF" fill-rule="nonzero"/></g></svg>

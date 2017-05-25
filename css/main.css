@@ -2845,6 +2845,10 @@ nav {
   top: 9px;
   left: 1em;
   z-index: 30;
+  transition: all 0.3s ease;
+}
+.logo:hover {
+  opacity: 0.6;
 }
 .logo img {
   height: 32px;
